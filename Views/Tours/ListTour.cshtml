@@ -1,0 +1,22 @@
+﻿@using oopQQ.Data.Models;
+@model IEnumerable<Tour>
+@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content ="width-device-width" />
+</head>
+<body>
+    <h2>Все туры</h2>
+    @{          foreach (var tour in Model)
+            {
+                <div>
+                    <h2>@tour.Name</h2>
+                    <p>@tour.Price.ToString("c")</p>
+                </div>
+            }
+    }
+</body>
+</html>
